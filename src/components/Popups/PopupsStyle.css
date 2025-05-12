@@ -1,0 +1,9 @@
+@keyframes up-to-down {
+    0%   {transform: translateY(-20vh);}
+  10%   {transform: translateY(2vh);}
+  92%   {transform: translateY(2vh);}
+  100%  {transform: translateY(-20vh);}
+  }
+.animate-up-to-down{
+    animation: up-to-down 6s ease-in-out 5ms;
+}
