@@ -37,7 +37,6 @@ async function displayRazorpay(payment_amount:number,userid:string |undefined) {
             amount: amount.toString(),
             currency: currency,
             description: "Test Transaction",
-            image:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Pariah_Dog.jpg/250px-Pariah_Dog.jpg',
             order_id: order_id,
             handler: async function (response:any) {
                 
@@ -61,7 +60,7 @@ async function displayRazorpay(payment_amount:number,userid:string |undefined) {
                          
 
                                 data&&  await Database.updateCredits(userid,previouscredit?previouscredit:0 + 15)
-                                window.location.reload()
+                     
                            
                             
                         }
@@ -69,7 +68,7 @@ async function displayRazorpay(payment_amount:number,userid:string |undefined) {
                             const creditsdata=await Database.getcredit(userid)
                             const previouscredit=creditsdata.data?.credits
                           
-                          
+
 
                                 data&&  await Database.updateCredits(userid,previouscredit?previouscredit:0 + 250)
                                 window.location.reload()
