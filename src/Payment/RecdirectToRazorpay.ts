@@ -59,7 +59,7 @@ async function displayRazorpay(payment_amount:number,userid:string |undefined) {
                             
                          
 
-                                data&&  await Database.updateCredits(userid,previouscredit?previouscredit:0 + 15)
+                                data&&  await Database.updateCredits(userid,20).then(()=>console.log("15 credit "))
                                 
                      
                            
